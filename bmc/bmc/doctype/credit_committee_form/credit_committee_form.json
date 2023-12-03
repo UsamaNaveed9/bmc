@@ -1,0 +1,486 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{applicant}-{loan_application}-{#####}",
+ "creation": "2023-11-20 01:38:22.370304",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "loan_application",
+  "applicant_name",
+  "types_of_loan",
+  "number_of_renewals",
+  "url",
+  "image",
+  "column_break_wtely",
+  "date_approved_by_credit_committee",
+  "status_of_credit_evaluation",
+  "reason_of_loan",
+  "approved_amount",
+  "tsg_evaluation_section",
+  "date_received",
+  "tsg_evaluator",
+  "column_break_o6bzs",
+  "date_evaluated_by_tsg",
+  "tsg_approval_status",
+  "initial_recommended_amount",
+  "supervisor_evaluation_section",
+  "supervisor_evaluator",
+  "column_break_2tbxp",
+  "date_evaluated_by_supervisor",
+  "supervisor_approval_status",
+  "manager_evaluation_section",
+  "evaluated_by_manager",
+  "column_break_sfdds",
+  "aluated_by_supervisor",
+  "manager_approval_status",
+  "amended_from",
+  "renewal_recommendation_form_section",
+  "amount_of_loan",
+  "date_release",
+  "column_break_4h5ca",
+  "daily_payment",
+  "date_due",
+  "section_break_ofkaq",
+  "balance_as_of",
+  "column_break_2dzsq",
+  "total_no_of_days_paid",
+  "remarks",
+  "arrears_info_section",
+  "with_arrears",
+  "nasr",
+  "column_break_bz6v8",
+  "number_of_days_with_arrears",
+  "section_break_ztpkc",
+  "underpayment",
+  "records",
+  "section_break_khxcu",
+  "borrower_requesting_to_be_scheduled_on",
+  "in_the_amount_of",
+  "section_break_7ympj",
+  "same_amount",
+  "money_already_set_aside",
+  "no_hardship",
+  "borrower_is_pregnant",
+  "months_pregnant",
+  "expected_date_of_delivery",
+  "business_improved",
+  "column_break_qwvsr",
+  "collector_waitsreturns_most_of_the_time",
+  "low_sales_could_not_afford_daily_payment",
+  "not_direct_collection",
+  "payments_given_to",
+  "close_business",
+  "area_to_be_closed",
+  "bad_character",
+  "section_break_egxnf",
+  "reason_for_arrears",
+  "section_break_x06ym",
+  "collectors_name",
+  "date_filled_up_collector"
+ ],
+ "fields": [
+  {
+   "fieldname": "loan_application",
+   "fieldtype": "Link",
+   "label": "Loan Application ",
+   "options": "Loan Application"
+  },
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "label": "Applicant Name"
+  },
+  {
+   "fieldname": "types_of_loan",
+   "fieldtype": "Select",
+   "label": "Types of Loan",
+   "options": "New Loan\nRenewal"
+  },
+  {
+   "fieldname": "number_of_renewals",
+   "fieldtype": "Data",
+   "label": "Number of Renewals"
+  },
+  {
+   "fieldname": "column_break_wtely",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_approved_by_credit_committee",
+   "fieldtype": "Date",
+   "label": "Date Approved by Credit Committee "
+  },
+  {
+   "fieldname": "status_of_credit_evaluation",
+   "fieldtype": "Select",
+   "label": "Status of Credit Evaluation",
+   "options": "Open\nApproved\nRejected"
+  },
+  {
+   "fieldname": "reason_of_loan",
+   "fieldtype": "Small Text",
+   "label": "Reason of Loan"
+  },
+  {
+   "fieldname": "approved_amount",
+   "fieldtype": "Currency",
+   "label": "Approved Amount"
+  },
+  {
+   "fieldname": "tsg_evaluation_section",
+   "fieldtype": "Section Break",
+   "label": "TSG Evaluation"
+  },
+  {
+   "fieldname": "date_received",
+   "fieldtype": "Date",
+   "label": "Date Received by TSG"
+  },
+  {
+   "fieldname": "tsg_evaluator",
+   "fieldtype": "Link",
+   "label": "Evaluated by (TSG)",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_o6bzs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_evaluated_by_tsg",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "tsg_approval_status",
+   "fieldtype": "Select",
+   "label": "TSG Approval Status",
+   "options": "Open\nApproved\nRejected"
+  },
+  {
+   "fieldname": "initial_recommended_amount",
+   "fieldtype": "Currency",
+   "label": "Initial Recommended Amount"
+  },
+  {
+   "fieldname": "supervisor_evaluation_section",
+   "fieldtype": "Section Break",
+   "label": "Supervisor Evaluation"
+  },
+  {
+   "fieldname": "supervisor_evaluator",
+   "fieldtype": "Link",
+   "label": "Evaluated by (Supervisor)",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_2tbxp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_evaluated_by_supervisor",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "supervisor_approval_status",
+   "fieldtype": "Select",
+   "label": "Supervisor Approval Status",
+   "options": "Open\nApproved\nRejected"
+  },
+  {
+   "fieldname": "manager_evaluation_section",
+   "fieldtype": "Section Break",
+   "label": "Manager Evaluation"
+  },
+  {
+   "default": "Employee",
+   "fieldname": "evaluated_by_manager",
+   "fieldtype": "Link",
+   "label": "Evaluated by (Manager)",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_sfdds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aluated_by_supervisor",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "manager_approval_status",
+   "fieldtype": "Select",
+   "label": "Manager Approval Status",
+   "options": "Open\nApproved\nRejected"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Credit Committee Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "renewal_recommendation_form_section",
+   "fieldtype": "Section Break",
+   "label": "Renewal Recommendation Form"
+  },
+  {
+   "fieldname": "amount_of_loan",
+   "fieldtype": "Data",
+   "label": "Amount of Loan"
+  },
+  {
+   "fieldname": "date_release",
+   "fieldtype": "Date",
+   "label": "Date Release"
+  },
+  {
+   "fieldname": "column_break_4h5ca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "daily_payment",
+   "fieldtype": "Data",
+   "label": "Daily Payment"
+  },
+  {
+   "fieldname": "date_due",
+   "fieldtype": "Date",
+   "label": "Date Due"
+  },
+  {
+   "fieldname": "section_break_ofkaq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "balance_as_of",
+   "fieldtype": "Data",
+   "label": "Balance as of"
+  },
+  {
+   "fieldname": "column_break_2dzsq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_no_of_days_paid",
+   "fieldtype": "Data",
+   "label": "Total no. of days paid"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "arrears_info_section",
+   "fieldtype": "Section Break",
+   "label": "Arrears info"
+  },
+  {
+   "default": "0",
+   "fieldname": "with_arrears",
+   "fieldtype": "Check",
+   "label": "With Arrears"
+  },
+  {
+   "default": "0",
+   "fieldname": "nasr",
+   "fieldtype": "Check",
+   "label": "NASR"
+  },
+  {
+   "fieldname": "column_break_bz6v8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number_of_days_with_arrears",
+   "fieldtype": "Data",
+   "label": "Number of Days with Arrears"
+  },
+  {
+   "fieldname": "section_break_ztpkc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "underpayment",
+   "fieldtype": "Heading",
+   "label": "Underpayment and Arrears"
+  },
+  {
+   "fieldname": "records",
+   "fieldtype": "Table",
+   "label": "Records",
+   "options": "Underpayment and Arrears"
+  },
+  {
+   "fieldname": "section_break_khxcu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "borrower_requesting_to_be_scheduled_on",
+   "fieldtype": "Datetime",
+   "label": "Borrower requesting to be scheduled on "
+  },
+  {
+   "fieldname": "in_the_amount_of",
+   "fieldtype": "Currency",
+   "label": "in the amount of "
+  },
+  {
+   "fieldname": "section_break_7ympj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "same_amount",
+   "fieldtype": "Check",
+   "label": "Same Amount "
+  },
+  {
+   "default": "0",
+   "fieldname": "money_already_set_aside",
+   "fieldtype": "Check",
+   "label": "Money already set aside"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_hardship",
+   "fieldtype": "Check",
+   "label": "No hardship"
+  },
+  {
+   "default": "0",
+   "fieldname": "borrower_is_pregnant",
+   "fieldtype": "Check",
+   "label": "Borrower is pregnant"
+  },
+  {
+   "fieldname": "months_pregnant",
+   "fieldtype": "Data",
+   "label": "Months pregnant"
+  },
+  {
+   "default": "0",
+   "fieldname": "expected_date_of_delivery",
+   "fieldtype": "Check",
+   "label": "Expected date of delivery"
+  },
+  {
+   "default": "0",
+   "fieldname": "business_improved",
+   "fieldtype": "Check",
+   "label": "Business improved"
+  },
+  {
+   "fieldname": "column_break_qwvsr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "collector_waitsreturns_most_of_the_time",
+   "fieldtype": "Check",
+   "label": "Collector waits/returns most of the time"
+  },
+  {
+   "default": "0",
+   "fieldname": "low_sales_could_not_afford_daily_payment",
+   "fieldtype": "Check",
+   "label": "Low sales could not afford daily payment"
+  },
+  {
+   "default": "0",
+   "fieldname": "not_direct_collection",
+   "fieldtype": "Check",
+   "label": "Not direct collection"
+  },
+  {
+   "fieldname": "payments_given_to",
+   "fieldtype": "Data",
+   "label": "Payments given to"
+  },
+  {
+   "default": "0",
+   "fieldname": "close_business",
+   "fieldtype": "Check",
+   "label": "Close business"
+  },
+  {
+   "default": "0",
+   "fieldname": "area_to_be_closed",
+   "fieldtype": "Check",
+   "label": "Area to be closed"
+  },
+  {
+   "default": "0",
+   "fieldname": "bad_character",
+   "fieldtype": "Check",
+   "label": "Bad Character"
+  },
+  {
+   "fieldname": "section_break_egxnf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reason_for_arrears",
+   "fieldtype": "Small Text",
+   "label": "Reason for Arrears"
+  },
+  {
+   "fieldname": "section_break_x06ym",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "collectors_name",
+   "fieldtype": "Data",
+   "label": "Collector's Name"
+  },
+  {
+   "fieldname": "date_filled_up_collector",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "url"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "HTML",
+   "label": "image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-04 02:53:17.088330",
+ "modified_by": "Administrator",
+ "module": "BMC",
+ "name": "Credit Committee Form",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
